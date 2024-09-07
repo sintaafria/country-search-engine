@@ -1,0 +1,17 @@
+:root {
+    --bs-main-primary: #8362F2;
+    --bs-neutral-10: #FFFFFF;
+}
+
+.bs-button{
+    padding: 13px 15px;
+    border-radius: 10px;
+}
+
+.bs-fluid{
+    width: 100%;
+}
+.bs-button-variant-primary{
+    background-color: var(--bs-main-primary);
+    color: var(--bs-neutral-10);
+}
