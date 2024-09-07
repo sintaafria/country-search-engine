@@ -6,6 +6,10 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  --danger: #FF0000;
+  --neutral: #C8C8C8;
+  --primary: #8362F2;
+  --secondary: #8DD4CC;
 }
 
 body {

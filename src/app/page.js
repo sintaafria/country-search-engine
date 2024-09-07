@@ -1,5 +1,5 @@
 "use client"
-import Search from "@/app/(components)/atoms/input/search";
+import Search from "@/app/(components)/molecules/search";
 import { debounce } from "lodash";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
@@ -33,11 +33,10 @@ export default function Home() {
 	}, [keyword])
 
 	return (
-		<div className="flex flex-col gap-[41px] items-center justify-center min-h-screen">
+		<div className="flex-item-center flex-col gap-[41px] min-h-screen">
 			<h1 className="text-7xl font-bold">Country</h1>
 			<div className="w-[700px]">
-				<Search 
-					fluid
+				<Search
 					value={keyword}
 					onChange={(e) => setKeyword(e.target.value)}
 					result={result}

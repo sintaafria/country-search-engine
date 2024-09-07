@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+    @apply p-[25px] rounded-[5px] shadow;
+}
+
+.latlong-card{
+    @apply bg-[url('/images/globe.svg')] bg-no-repeat bg-right-bottom;
+}
+
+.text-link{
+    @apply text-primary underline underline-offset-4;
+}

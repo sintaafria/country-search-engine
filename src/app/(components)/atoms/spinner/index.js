@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Spinner({size=24}) {
 	return (
-		<div className="text-[#C8C8C8]">
+		<div className="text-neutral">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width={size}

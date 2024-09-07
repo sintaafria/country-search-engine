@@ -8,6 +8,7 @@ import { getCallingCode, getCurrency } from "@/app/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import "./style.css"
 
 export default function Result({ params }) {
 	const [data, setData] = useState(null);
@@ -103,15 +104,15 @@ export default function Result({ params }) {
 							))}
 						</div>
 						<div className="grid grid-cols-3 gap-3 mt-[25px]">
-							<div className="p-[25px] rounded-[5px] shadow bg-[url('/images/globe.svg')] bg-no-repeat bg-right-bottom">
+							<div className="card latlong-card">
 								<p className="font-medium mb-3">LatLong</p>
-								<h2 className="text-[#8362F2] text-5xl font-bold">
+								<h2 className="text-primary text-5xl font-bold">
 									{`${data?.latlng[0].toFixed(
 										1
 									)}, ${data?.latlng[1].toFixed(1)}`}
 								</h2>
 							</div>
-							<div className="p-[25px] rounded-[5px] shadow">
+							<div className="card">
 								<ul className="grid grid-row gap-2">
 									<p>
 										<span>Capital: </span>
@@ -138,7 +139,7 @@ export default function Result({ params }) {
 								<p className="text-lg font-medium">
 									Calling Code
 								</p>
-								<h2 className="text-[#8362F2] text-5xl font-bold">
+								<h2 className="text-primary text-5xl font-bold">
 									{getCallingCode(data)}
 								</h2>
 								<div className="text-sm inline">
@@ -148,7 +149,7 @@ export default function Result({ params }) {
 												content={sameCallCode}
 											/>
 										}
-										className="text-[#8362F2] underline underline-offset-4"
+										className="text-link"
 									>
 										{`${sameCallCode.length} country`}
 									</Tooltip>
@@ -157,7 +158,7 @@ export default function Result({ params }) {
 							</div>
 							<div className="font-medium grid grid-row gap-[5px]">
 								<p className="text-lg font-medium">Currency</p>
-								<h2 className="text-[#8362F2] text-5xl font-bold">
+								<h2 className="text-primary text-5xl font-bold">
 									{getCurrency(data)}
 								</h2>
 								<div className="text-sm inline">
@@ -167,7 +168,7 @@ export default function Result({ params }) {
 												content={sameCurrency}
 											/>
 										}
-										className="text-[#8362F2] underline underline-offset-4"
+										className="text-link"
 									>
 										{`${sameCurrency.length} country`}
 									</Tooltip>
@@ -180,7 +181,7 @@ export default function Result({ params }) {
 					<NotFound />
 				)
 			) : (
-				<div className="flex items-center justify-center h-screen">
+				<div className="flex-item-center h-screen">
 					<Spinner size={48} />
 				</div>
 			)}

@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.styled-input{
+    @apply border-solid border-[0.5px]
+    border-neutral rounded-[10px] 
+    pl-4 pr-9 py-3
+    active:border active:outline 
+    hover:border hover:border-[#8362F280] 
+    focus:outline outline-2 outline-primary
+}
